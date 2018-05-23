@@ -1,7 +1,7 @@
 {
-  "utterance": "Flip a coin",
-  "intent_type": "CoinFlipIntent",
+  "utterance": "Give Karma",
+  "intent_type": "KarmaIntent",
   "intent": {
-    "ThankYouKeyword": "flip a coin"
+    "ThankYouKeyword": "give karma"
   }
 }
