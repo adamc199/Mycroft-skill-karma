@@ -53,7 +53,7 @@ class KarmaSkill(MycroftSkill):
     # of a file in the dialog folder, and Mycroft speaks its contents when
     # the method is called.
     def handle_karma_intent(self, message):
-        self.speak_dialog("karma.plain")
+        #self.speak_dialog("karma.plain")
         self.process = play_mp3(join(dirname(__file__), "mp3", "karma-plain.mp3"))
         #if bool(random.getrandbits(1)):
          #   self.process.wait()
