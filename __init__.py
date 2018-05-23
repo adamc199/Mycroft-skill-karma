@@ -54,13 +54,13 @@ class KarmaSkill(MycroftSkill):
     # the method is called.
     def handle_karma_intent(self, message):
         #self.speak_dialog("karma.plain")
-        self.process = play_mp3(join(dirname(__file__), "mp3", "karma-plain.mp3"))
-        if bool(random.getrandbits(1)):
-            self.process.wait()
-            self.speak_dialog("You've got karma")
-        else:
-            self.process.wait()
-            self.speak_dialog("Enjoy the Karma!")
+        #self.process = play_mp3(join(dirname(__file__), "mp3", "karma-plain.mp3"))
+        #if bool(random.getrandbits(1)):
+         #   self.process.wait()
+          #  self.speak_dialog("You've got karma")
+        #else:
+        #    self.process.wait()
+        #    self.speak_dialog("Enjoy the Karma!")
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
