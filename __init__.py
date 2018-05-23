@@ -42,7 +42,7 @@ class KarmaSkill(MycroftSkill):
     def initialize(self):
         self.load_data_files(dirname(__file__))
 
-        coin_flip_intent = IntentBuilder("KarmaIntent").\
+        karma_intent = IntentBuilder("KarmaIntent").\
             require("KarmaKeyword").build()
         self.register_intent(karma_intent, self.handle_karma_intent)
 
