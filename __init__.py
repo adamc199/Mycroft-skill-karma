@@ -45,10 +45,6 @@ class KarmaSkill(MycroftSkill):
         karma_intent = IntentBuilder("KarmaIntent").\
             require("KarmaKeyword").build()
         self.register_intent(karma_intent, self.handle_karma_intent)
-        
-        goat_karma_intent = IntentBuilder("GoatKarmaIntent").\
-            require("GoatKarmaKeyword").build()
-        self.register_intent(goat_karma_intent, self.handle_goat_karma_intent)
 
     # The "handle_xxxx_intent" functions define Mycroft's behavior when
     # each of the skill's intents is triggered: in this case, he simply
@@ -56,12 +52,15 @@ class KarmaSkill(MycroftSkill):
     # actually speak the text it's passed--instead, that text is the filename
     # of a file in the dialog folder, and Mycroft speaks its contents when
     # the method is called.
-    if def handle_karma_intent(self, message):
+    def handle_karma_intent(self, message):
+        #self.speak_dialog("karma.plain")
         self.process = play_mp3(join(dirname(__file__), "mp3", "karma-plain.mp3"))
-    else
-        def handle_goat_karma_intent(self, message):
-        self.process = play_mp3(join(dirname(__file__), "mp3", "karma-goat.mp3"))
-     
+        #if bool(random.getrandbits(1)):
+         #   self.process.wait()
+          #  self.speak_dialog("You've got karma")
+        #else:
+        #    self.process.wait()
+        #    self.speak_dialog("Enjoy the Karma!")
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
